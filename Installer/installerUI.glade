@@ -13,27 +13,27 @@
         <property name="can-focus">False</property>
         <property name="orientation">vertical</property>
         <child>
-          <object class="GtkBox">
+          <object class="GtkStack" id="stack">
             <property name="visible">True</property>
             <property name="can-focus">False</property>
-            <property name="spacing">10</property>
             <child>
-              <object class="GtkImage">
+              <object class="GtkBox" id="intro-master">
                 <property name="visible">True</property>
                 <property name="can-focus">False</property>
-                <property name="halign">start</property>
-                <property name="pixbuf">../../../Téléchargements/LROS_installer_image.png</property>
-              </object>
-              <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
-                <property name="position">0</property>
-              </packing>
-            </child>
-            <child>
-              <object class="GtkStack" id="stack">
-                <property name="visible">True</property>
-                <property name="can-focus">False</property>
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="pixbuf">Images/Intro.png</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
+                  </packing>
+                </child>
                 <child>
                   <object class="GtkBox" id="intro">
                     <property name="visible">True</property>
@@ -49,8 +49,6 @@
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="halign">start</property>
-                            <property name="margin-left">10</property>
-                            <property name="margin-right">10</property>
                             <property name="margin-start">10</property>
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
@@ -72,8 +70,6 @@ Setup Wizard</property>
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="halign">start</property>
-                            <property name="margin-left">10</property>
-                            <property name="margin-right">10</property>
                             <property name="margin-start">10</property>
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
@@ -111,13 +107,11 @@ Setup Wizard</property>
                             <property name="margin-bottom">10</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkRadioButton" id="radiobutton2">
+                              <object class="GtkRadioButton" id="radiobutton3">
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
-                                <property name="active">True</property>
                                 <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton1</property>
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
@@ -146,8 +140,8 @@ Setup Wizard</property>
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <property name="label" translatable="yes">You can test LunarRatOS without making any changes
- to your current system.</property>
+                                <property name="label" translatable="yes">You can test LunarRatOS without making any 
+changes to your current system.</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -172,13 +166,12 @@ Setup Wizard</property>
                             <property name="margin-bottom">10</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkRadioButton" id="radiobutton1">
+                              <object class="GtkRadioButton" id="radiobutton4">
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">False</property>
-                                <property name="active">True</property>
                                 <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton2</property>
+                                <property name="group">radiobutton3</property>
                                 <child>
                                   <object class="GtkLabel">
                                     <property name="visible">True</property>
@@ -205,8 +198,8 @@ Setup Wizard</property>
                                 <property name="margin-end">10</property>
                                 <property name="margin-top">10</property>
                                 <property name="margin-bottom">10</property>
-                                <property name="label" translatable="yes">You can install LunarRatOS right now alongside or instead
-of your current system.</property>
+                                <property name="label" translatable="yes">You can install LunarRatOS right now alongside or 
+instead of your current system.</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -247,14 +240,36 @@ of your current system.</property>
                     </child>
                   </object>
                   <packing>
-                    <property name="name">page_welcome</property>
-                    <property name="title" translatable="yes">welcome</property>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
+                  </packing>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkBox" id="localisation-master">
+                <property name="visible">True</property>
+                <property name="can-focus">False</property>
+                <property name="spacing">10</property>
+                <child>
+                  <object class="GtkImage">
+                    <property name="visible">True</property>
+                    <property name="can-focus">False</property>
+                    <property name="halign">start</property>
+                    <property name="pixbuf">Images/Localisation.png</property>
+                  </object>
+                  <packing>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">0</property>
                   </packing>
                 </child>
                 <child>
                   <object class="GtkBox" id="localisation">
                     <property name="visible">True</property>
                     <property name="can-focus">False</property>
+                    <property name="hexpand">True</property>
                     <property name="orientation">vertical</property>
                     <child>
                       <object class="GtkBox">
@@ -266,14 +281,11 @@ of your current system.</property>
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="halign">start</property>
-                            <property name="margin-left">10</property>
-                            <property name="margin-right">10</property>
                             <property name="margin-start">10</property>
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
-                            <property name="label" translatable="yes">Welcome to the LunarRatOS
-Setup Wizard</property>
+                            <property name="label" translatable="yes">Localisation &amp; Timezone</property>
                             <attributes>
                               <attribute name="font-desc" value="Sans Bold Italic 16"/>
                             </attributes>
@@ -289,13 +301,11 @@ Setup Wizard</property>
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
                             <property name="halign">start</property>
-                            <property name="margin-left">10</property>
-                            <property name="margin-right">10</property>
                             <property name="margin-start">10</property>
                             <property name="margin-end">10</property>
                             <property name="margin-top">10</property>
                             <property name="margin-bottom">10</property>
-                            <property name="label" translatable="yes">What do you want to do ?</property>
+                            <property name="label" translatable="yes">Where do you live ?</property>
                             <property name="wrap">True</property>
                             <property name="max-width-chars">50</property>
                           </object>
@@ -316,39 +326,20 @@ Setup Wizard</property>
                       <object class="GtkBox">
                         <property name="visible">True</property>
                         <property name="can-focus">False</property>
-                        <property name="margin-left">10</property>
-                        <property name="margin-start">10</property>
                         <property name="orientation">vertical</property>
+                        <property name="spacing">20</property>
                         <child>
                           <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="margin-left">10</property>
-                            <property name="margin-right">10</property>
                             <property name="margin-start">10</property>
-                            <property name="margin-end">10</property>
-                            <property name="margin-top">10</property>
-                            <property name="margin-bottom">10</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkRadioButton" id="radiobutton3">
+                              <object class="GtkLabel">
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton1</property>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="margin-left">10</property>
-                                    <property name="margin-start">10</property>
-                                    <property name="label" translatable="yes">Test a live version of LunarRatOS</property>
-                                    <attributes>
-                                      <attribute name="weight" value="bold"/>
-                                    </attributes>
-                                  </object>
-                                </child>
+                                <property name="can-focus">False</property>
+                                <property name="opacity">0.75</property>
+                                <property name="label" translatable="yes">Timezone</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -357,19 +348,14 @@ Setup Wizard</property>
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkComboBoxText">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="halign">start</property>
-                                <property name="valign">start</property>
-                                <property name="margin-left">10</property>
-                                <property name="margin-right">10</property>
                                 <property name="margin-start">10</property>
                                 <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="label" translatable="yes">You can test LunarRatOS without making any changes
- to your current system.</property>
+                                <items>
+                                  <item translatable="yes">UTC+2 / Europe / Paris</item>
+                                </items>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -388,32 +374,14 @@ Setup Wizard</property>
                           <object class="GtkBox">
                             <property name="visible">True</property>
                             <property name="can-focus">False</property>
-                            <property name="margin-left">10</property>
-                            <property name="margin-right">10</property>
                             <property name="margin-start">10</property>
-                            <property name="margin-end">10</property>
-                            <property name="margin-top">10</property>
-                            <property name="margin-bottom">10</property>
                             <property name="orientation">vertical</property>
                             <child>
-                              <object class="GtkRadioButton" id="radiobutton4">
+                              <object class="GtkLabel">
                                 <property name="visible">True</property>
-                                <property name="can-focus">True</property>
-                                <property name="receives-default">False</property>
-                                <property name="draw-indicator">True</property>
-                                <property name="group">radiobutton2</property>
-                                <child>
-                                  <object class="GtkLabel">
-                                    <property name="visible">True</property>
-                                    <property name="can-focus">False</property>
-                                    <property name="margin-left">10</property>
-                                    <property name="margin-start">10</property>
-                                    <property name="label" translatable="yes">Install LunarRatOS now</property>
-                                    <attributes>
-                                      <attribute name="weight" value="bold"/>
-                                    </attributes>
-                                  </object>
-                                </child>
+                                <property name="can-focus">False</property>
+                                <property name="opacity">0.75</property>
+                                <property name="label" translatable="yes">Localisation</property>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -422,17 +390,14 @@ Setup Wizard</property>
                               </packing>
                             </child>
                             <child>
-                              <object class="GtkLabel">
+                              <object class="GtkComboBoxText">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="margin-left">10</property>
-                                <property name="margin-right">10</property>
                                 <property name="margin-start">10</property>
                                 <property name="margin-end">10</property>
-                                <property name="margin-top">10</property>
-                                <property name="margin-bottom">10</property>
-                                <property name="label" translatable="yes">You can install LunarRatOS right now alongside or instead
-of your current system.</property>
+                                <items>
+                                  <item translatable="yes">Paris, France</item>
+                                </items>
                               </object>
                               <packing>
                                 <property name="expand">False</property>
@@ -475,15 +440,15 @@ of your current system.</property>
                     </child>
                   </object>
                   <packing>
-                    <property name="name">page0</property>
-                    <property name="title" translatable="yes">page0</property>
-                    <property name="position">1</property>
+                    <property name="expand">False</property>
+                    <property name="fill">True</property>
+                    <property name="position">2</property>
                   </packing>
                 </child>
               </object>
               <packing>
-                <property name="expand">False</property>
-                <property name="fill">True</property>
+                <property name="name">page0</property>
+                <property name="title" translatable="yes">page0</property>
                 <property name="position">1</property>
               </packing>
             </child>
@@ -522,6 +487,7 @@ of your current system.</property>
                 <child>
                   <object class="GtkButton" id="back">
                     <property name="label" translatable="yes">&lt; _Back</property>
+                    <property name="related-action"/>
                     <property name="width-request">74</property>
                     <property name="visible">True</property>
                     <property name="sensitive">False</property>
